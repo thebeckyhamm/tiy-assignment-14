@@ -1,0 +1,38 @@
+body {
+  background-color: #c5d0d6;
+  margin: 0;
+}
+header h1 {
+  background-color: #616d61;
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+}
+.album {
+  float: left;
+  margin: 1em;
+  text-align: center;
+}
+.album .album-photo {
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.photo {
+  float: left;
+  margin: 1em;
+  text-align: center;
+}
+.photo .photo-container {
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+}
+.photo h3 {
+  color: #465f39;
+  margin: 0;
+  padding: .5em;
+  text-align: center;
+}

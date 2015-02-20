@@ -1,62 +1,62 @@
 [{
-  "album": "Korea",
-  "name": "Busan",
-  "photo": "images/busan.jpg",
+  "album_name": "Korea",
+  "photo_name": "Busan",
+  "photo_url": "images/busan.jpg",
   "photo_id": 1
 },{
-  "album": "Korea",
-  "name": "Drying peppers",
-  "photo": "images/peppers.jpg",
+  "album_name": "Korea",
+  "photo_name": "Drying peppers",
+  "photo_url": "images/peppers.jpg",
   "photo_id": 2
 },{
-  "album": "Korea",
-  "name": "Lilypads",
-  "photo": "images/lilypads.jpg",
+  "album_name": "Korea",
+  "photo_name": "Lilypads",
+  "photo_url": "images/lilypads.jpg",
   "photo_id": 3
 },{
-  "album": "Korea",
-  "name": "Seoraksan National Park",
-  "photo": "images/seoraksan.jpg",
+  "album_name": "Korea",
+  "photo_name": "Seoraksan National Park",
+  "photo_url": "images/seoraksan.jpg",
   "photo_id": 4
 },{
-  "album": "People",
-  "name": "Spartan Race",
-  "photo": "images/spartanrace.jpg",
+  "album_name": "People",
+  "photo_name": "Spartan Race",
+  "photo_url": "images/spartanrace.jpg",
   "photo_id": 5
 },{
-  "album": "England",
-  "name": "St. Paul's",
-  "photo": "images/stpaul.jpg",
+  "album_name": "England",
+  "photo_name": "St. Paul's",
+  "photo_url": "images/stpaul.jpg",
   "photo_id": 6
 },{
-  "album": "Puppy",
-  "name": "bruce",
-  "photo": "images/bruce.jpg",
+  "album_name": "Puppy",
+  "photo_name": "bruce",
+  "photo_url": "images/bruce.jpg",
   "photo_id": 7
 },{
-  "album": "Boats",
-  "name": "scheherazade",
-  "photo": "images/scheherazade.jpg",
+  "album_name": "Boats",
+  "photo_name": "scheherazade",
+  "photo_url": "images/scheherazade.jpg",
   "photo_id": 8
 },{
-  "album": "Boats",
-  "name": "Kaori",
-  "photo": "https://photos-1.dropbox.com/t/2/AADZzYwF8ePv41wHdN-9im9-76c7ZMbs4WIK494KqAaKqg/12/17741212/jpeg/32x32/3/1424448000/0/2/2011-05-08%2013.19.36.jpg/CJzrugggASgBKAI/zV-6XgohnOaNV-dh881g4oRyi1EmB95iWlw2jwUL13I?size=1024x768",
+  "album_name": "Boats",
+  "photo_name": "Kaori",
+  "photo_url": "https://photos-1.dropbox.com/t/2/AADZzYwF8ePv41wHdN-9im9-76c7ZMbs4WIK494KqAaKqg/12/17741212/jpeg/32x32/3/1424448000/0/2/2011-05-08%2013.19.36.jpg/CJzrugggASgBKAI/zV-6XgohnOaNV-dh881g4oRyi1EmB95iWlw2jwUL13I?size=1024x768",
   "photo_id": 9
 },{
-  "album": "Boats",
-  "name": "Newport",
-  "photo": "https://photos-1.dropbox.com/t/2/AAAggMK6E1Y3rOh-1ZvY3SyjiaiYl9vgei9G9ZdJShFr8g/12/17741212/jpeg/32x32/3/1424448000/0/2/2011-06-25%2019.40.14.jpg/CJzrugggASgBKAI/Pu7xzrF5loc-ptHWfr7Ua-HGs52n5H06zssqmb7LMlM?size=1024x768",
+  "album_name": "Boats",
+  "photo_name": "Newport",
+  "photo_url": "https://photos-1.dropbox.com/t/2/AAAggMK6E1Y3rOh-1ZvY3SyjiaiYl9vgei9G9ZdJShFr8g/12/17741212/jpeg/32x32/3/1424448000/0/2/2011-06-25%2019.40.14.jpg/CJzrugggASgBKAI/Pu7xzrF5loc-ptHWfr7Ua-HGs52n5H06zssqmb7LMlM?size=1024x768",
   "photo_id": 10
 },{
-  "album": "Germany",
-  "name": "Oldenburg",
-  "photo": "images/oldenburg.jpg",
+  "album_name": "Germany",
+  "photo_name": "Oldenburg",
+  "photo_url": "images/oldenburg.jpg",
   "photo_id": 11
 },{
-  "album": "Germany",
-  "name": "Northern Coast",
-  "photo": "images/coast.jpg",
+  "album_name": "Germany",
+  "photo_name": "Northern Coast",
+  "photo_url": "images/coast.jpg",
   "photo_id": 12
 }
 ]

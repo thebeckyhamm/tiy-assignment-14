@@ -7,7 +7,7 @@ var Album = (function(){
     };
 
     Album.prototype = {
-        // render the template
+        // render the template for the album thumb
         render: function() { 
             return $(template(this.data));
         }
@@ -23,14 +23,17 @@ var AlbumList = (function(){
 
     function AlbumList(data) {
         this.data = data;
-        this.$el = $("<div />");
     };
 
     AlbumList.prototype = {
         render: function() {
-            var $el = $( template() ); // render the template first
-            var $container = $el.find(".albums-container"); // then grab the container div
+            // render the album collection template first
+            var $el = $( template() ); 
+            // then grab the container div
+            var $container = $el.find(".albums-container"); 
 
+            // create each new album, loop over them,
+            // render each and append it to the container
             _.each(this.data, function(album){
                 var thumbnail = new Album(album);
                 $container.append( thumbnail.render() );

@@ -83,7 +83,6 @@ var App = (function(){
 
                 $(".albums-container").on("click", ".album", function(event) {
                     var $album = $(event.currentTarget);
-
                     // get the clicked album name from the data attribute
                     var currentAlbum = $album.data("name");
                     //console.log(currentAlbum);
@@ -109,6 +108,9 @@ var App = (function(){
             $(".sidebar").on("click", "a", function(event) {
                 event.preventDefault();
                 var $album = $(event.currentTarget);
+
+                $(".sidebar a").removeClass("active");
+                $album.addClass("active");
 
                 var currentAlbum = $album.data("name");
                 if (currentAlbum === "all") {

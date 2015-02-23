@@ -1,6 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
 body {
   background-color: #c5d0d6;
   display: flex;
+  font-family: "Roboto Slab", serif;
   margin: 0;
   min-height: 100vh;
   position: relative;
@@ -14,41 +16,105 @@ ul li {
 }
 header h1 {
   background-color: #616d61;
+  box-shadow: 1px 0 2px 1px #293721;
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 300;
   margin: 0;
-  padding: 1em;
+  padding: .5em;
   text-align: center;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 .sidebar {
   background-color: #616d61;
   padding: 2em;
 }
+.main {
+  width: 100%;
+}
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .album {
-  float: left;
+  cursor: pointer;
   margin: 1em;
   text-align: center;
 }
 .album .album-photo {
   background-size: cover;
+  box-shadow: 0 0 2px 1px rgba(41, 55, 33, 0.2);
+  display: inline-flex;
   width: 300px;
   height: 300px;
+  transition: all 0.2s ease-in-out;
+}
+.album .album-name {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  display: inline-block;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+.album .album-name h3 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  padding: .5em;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.album:hover .album-photo {
+  box-shadow: none;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+.album:hover .album-photo h3 {
+  padding: 1em;
+}
+.album:hover .album-name {
+  box-shadow: inset 0 0 0px 10px rgba(41, 55, 33, 0.2);
+}
+.photo-collection h2 {
+  background-color: #293721;
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  padding: .5em;
+  width: 100%;
+}
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .photo {
-  float: left;
+  cursor: pointer;
   margin: 1em;
   text-align: center;
 }
-.photo .photo-container {
+.photo .photo-wrapper {
   background-size: cover;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: 200px;
 }
 .photo h3 {
-  color: #465f39;
-  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 300;
+  margin: auto;
   padding: .5em;
   text-align: center;
+  transition: padding 0.1s ease-in;
+}
+.photo:hover h3 {
+  padding: 1em;
 }
 .overlay {
   position: absolute;
@@ -57,12 +123,51 @@ header h1 {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 .overlay .photo-zoom {
-  margin-top: 2em;
+  padding-top: 3em;
+  position: relative;
   text-align: center;
+}
+.overlay .photo-zoom .back-button {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: white;
+  margin-top: .5em;
+  padding: .25em .5em;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  transition: background 0.2s ease-in-out;
+}
+.overlay .photo-zoom .back-button:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 .overlay img {
   max-width: 75%;
   max-height: 500px;
+}
+.overlay h3 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  padding: .5em;
+}
+.sidebar a {
+  color: white;
+  display: block;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: .25em .5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+}
+.sidebar a:hover {
+  background-color: rgba(41, 55, 33, 0.5);
+}
+.sidebar a.active {
+  background-color: rgba(41, 55, 33, 0.5);
 }

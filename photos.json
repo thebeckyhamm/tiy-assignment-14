@@ -24,7 +24,7 @@
   "photo_url": "images/spartanrace.jpg",
   "photo_id": 5
 },{
-  "album_name": "England",
+  "album_name": "UK",
   "photo_name": "St. Paul's",
   "photo_url": "images/stpaul.jpg",
   "photo_id": 6
@@ -41,12 +41,12 @@
 },{
   "album_name": "Boats",
   "photo_name": "Kaori",
-  "photo_url": "https://photos-1.dropbox.com/t/2/AADZzYwF8ePv41wHdN-9im9-76c7ZMbs4WIK494KqAaKqg/12/17741212/jpeg/32x32/3/1424448000/0/2/2011-05-08%2013.19.36.jpg/CJzrugggASgBKAI/zV-6XgohnOaNV-dh881g4oRyi1EmB95iWlw2jwUL13I?size=1024x768",
+  "photo_url": "images/kaori.jpg",
   "photo_id": 9
 },{
   "album_name": "Boats",
-  "photo_name": "Newport",
-  "photo_url": "https://photos-1.dropbox.com/t/2/AAAggMK6E1Y3rOh-1ZvY3SyjiaiYl9vgei9G9ZdJShFr8g/12/17741212/jpeg/32x32/3/1424448000/0/2/2011-06-25%2019.40.14.jpg/CJzrugggASgBKAI/Pu7xzrF5loc-ptHWfr7Ua-HGs52n5H06zssqmb7LMlM?size=1024x768",
+  "photo_name": "Scheherazade in Maine",
+  "photo_url": "images/scheherazade-236.jpg",
   "photo_id": 10
 },{
   "album_name": "Germany",
@@ -54,11 +54,56 @@
   "photo_url": "images/oldenburg.jpg",
   "photo_id": 11
 },{
-  "album_name": "Germany",
-  "photo_name": "Northern Coast",
-  "photo_url": "images/coast.jpg",
+  "album_name": "People",
+  "photo_name": "Gran",
+  "photo_url": "images/gran.jpg",
   "photo_id": 12
-}
+},{
+  "album_name": "People",
+  "photo_name": "Katie, Ev & Liz",
+  "photo_url": "images/kateevliz.jpg",
+  "photo_id": 13
+},{
+  "album_name": "People",
+  "photo_name": "Laura and Dad's Bday",
+  "photo_url": "images/candles.jpg",
+  "photo_id": 14
+},{
+  "album_name": "UK",
+  "photo_name": "Near Cumbria",
+  "photo_url": "images/england.jpg",
+  "photo_id": 15
+},{
+  "album_name": "UK",
+  "photo_name": "Castle in Scotland",
+  "photo_url": "images/scotland.jpg",
+  "photo_id": 16
+},{
+  "album_name": "People",
+  "photo_name": "Drip Castle Building",
+  "photo_url": "images/sandcastle.jpg",
+  "photo_id": 17
+},{
+  "album_name": "Puppy",
+  "photo_name": "Bruce again",
+  "photo_url": "images/bruce2.jpg",
+  "photo_id": 18
+},{
+  "album_name": "Puppy",
+  "photo_name": "More Bruce",
+  "photo_url": "images/bruce3.jpg",
+  "photo_id": 19
+},{
+  "album_name": "Germany",
+  "photo_name": "Regi",
+  "photo_url": "images/regi.jpg",
+  "photo_id": 20
+},{
+    "album_name": "Germany",
+    "photo_name": "Northern Coast",
+    "photo_url": "images/coast.jpg",
+    "photo_id": 20
+  }
 ]
 
 

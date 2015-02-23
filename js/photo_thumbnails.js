@@ -16,7 +16,8 @@ var Photo = (function(){
 })();
 
 var PhotoList = (function() {
-    var $container = $("<div />");
+    var template = JST["photo_collection"];
+
 
     function PhotoList(data) {
         this.data = data;
@@ -24,12 +25,14 @@ var PhotoList = (function() {
 
     PhotoList.prototype = {
         render: function() {
-            var $el = $container.empty();
+            var $renderedTemplate = $(template(this.data[0]));
+            console.log($renderedTemplate);
+            var $containerDiv = $renderedTemplate.find(".photo-container");
             _.each(this.data, function(photo){
                 var photo = new Photo(photo);
-                $el.append(photo.render());
+                $containerDiv.append(photo.render());
             });
-            return $el;
+            return $renderedTemplate;
         }
     }; 
 

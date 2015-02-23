@@ -6,7 +6,7 @@ var concat      = require("gulp-concat");
 var less        = require("gulp-less");
 var browserSync = require("browser-sync");
 
-var templatePath = "./js/templates/**/*.hbs";
+var templatePath = "./js/templates/*.hbs";
 var lessPath     = "./less/**/*.less";
 
 gulp.task("templates", function(){

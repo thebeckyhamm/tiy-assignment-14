@@ -22,13 +22,14 @@ var SidebarList = (function(){
         var $el = $("<ul />");
 
     function SidebarList(data) {
-        console.log(data);
         this.data = data;
     };
 
     SidebarList.prototype = {
 
         render: function() {
+            $el.empty();
+            $el.append("<li><a href='#' data-name='all'>All</a></li>");
             _.each(this.data, function(album) {
                 var listItem = new SidebarItem(album);
                 $el.append(listItem.render());

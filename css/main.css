@@ -1,6 +1,16 @@
 body {
   background-color: #c5d0d6;
+  display: flex;
   margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
 }
 header h1 {
   background-color: #616d61;
@@ -9,6 +19,10 @@ header h1 {
   margin: 0;
   padding: 1em;
   text-align: center;
+}
+.sidebar {
+  background-color: #616d61;
+  padding: 2em;
 }
 .album {
   float: left;
@@ -35,4 +49,20 @@ header h1 {
   margin: 0;
   padding: .5em;
   text-align: center;
+}
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.overlay .photo-zoom {
+  margin-top: 2em;
+  text-align: center;
+}
+.overlay img {
+  max-width: 75%;
+  max-height: 500px;
 }

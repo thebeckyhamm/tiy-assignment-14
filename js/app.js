@@ -4,9 +4,13 @@ var App = (function(){
         this.data = data;
         this.$content = $(".main");
         this.$sidebar = $(".sidebar");
+        this.$body = $("body");
 
+        this.showSidebar();
+        //console.log($sidebar);
         this.showAlbums();
-        this.addListeners();
+        this.addAlbumsListener();
+        this.$sidebar.hide();
 
 
     };
@@ -17,6 +21,7 @@ var App = (function(){
         getAlbumData: function() {
             // allow inner functions to access all data
             var app = this; 
+
 
             var albumData = _.chain(app.data)
                 .pluck("album_name") // ["korea", "korea", "england", ...]
@@ -51,52 +56,108 @@ var App = (function(){
             var list = new AlbumList(albums);
 
             this.$content.html(list.render());
+            this.$sidebar.hide();
         },
 
         showSidebar: function() {
             var albums = this.getAlbumData();
-            console.log(albums);
-
             var sidebarList = new SidebarList(albums);
-            console.log(sidebarList);
-            window.list = sidebarList;
-            this.$sidebar.html(sidebarList.render());
+            this.$sidebar.append(sidebarList.render());
         },
 
         showPhotos: function(album) {
             this.photoList = new PhotoList(album);
             this.$content.html(this.photoList.render());
+            this.$sidebar.show();
         },
 
         zoomPhoto: function(photo) {
+            this.photoZoom = new PhotoZoom(photo);
+            this.$body.prepend(this.photoZoom.render());
 
         },
 
-        addListeners: function() {
+        addAlbumsListener: function() {
             // allow lower functions to access this.data
             var app = this;
 
-            $(".albums-container").on("click", ".album", function(event) {
+                $(".albums-container").on("click", ".album", function(event) {
+                    var $album = $(event.currentTarget);
+
+                    // get the clicked album name from the data attribute
+                    var currentAlbum = $album.data("name");
+                    //console.log(currentAlbum);
+
+                    // Filter down all the data to only those with
+                    // the clicked album name. 
+                    // * filter on all data
+                    // * return only those where the album name equals
+                    //   the clicked album name
+                    var currentAlbumPhotos = _.filter(app.data, function(photo) {
+                        return photo.album_name === currentAlbum;
+                    });
+                    //console.log(currentAlbumPhotos)
+                    app.showPhotos(currentAlbumPhotos);
+                    app.addSidebarListener();
+                    app.addPhotoListener();
+                });          
+        },
+
+        addSidebarListener: function() {
+            var app = this;
+
+            $(".sidebar").on("click", "a", function(event) {
+                event.preventDefault();
                 var $album = $(event.currentTarget);
 
-                // get the clicked album name from the data attribute
                 var currentAlbum = $album.data("name");
-                //console.log(currentAlbum);
+                if (currentAlbum === "all") {
+                    app.showAlbums();
+                    app.addAlbumsListener();
+                    return;
+                }
 
-                // Filter down all the data to only those with
-                // the clicked album name. 
-                // * filter on all data
-                // * return only those where the album name equals
-                //   the clicked album name
                 var currentAlbumPhotos = _.filter(app.data, function(photo) {
                     return photo.album_name === currentAlbum;
                 });
-                //console.log(currentAlbumPhotos)
+                console.log(currentAlbumPhotos);
                 app.showPhotos(currentAlbumPhotos);
-                app.showSidebar();
-            });
-           
+                app.addPhotoListener();
 
+            });
+        },
+
+        addPhotoListener: function() {
+            var app = this;
+
+            $(".photo").on("click", function(event) {
+                var $photo = $(event.currentTarget);
+                console.log($photo);
+
+                var currentPhotoId = $photo.data("photo-id");
+                console.log(currentPhotoId);
+
+                var currentPhoto = _.find(app.data, function(photo){
+                    return photo.photo_id === currentPhotoId;
+                });
+
+                app.currentPhoto = currentPhoto;
+                console.log(currentPhoto);
+
+                app.zoomPhoto(currentPhoto);
+                app.addBackButtonListener();
+
+            });
+        },
+
+        addBackButtonListener: function() {
+            var app = this;
+
+            $(".back-button").on("click", function(event) {
+                event.preventDefault();
+                $(".overlay").remove();
+
+            });       
         }
 
     };

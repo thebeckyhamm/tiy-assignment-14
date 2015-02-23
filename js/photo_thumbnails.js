@@ -24,7 +24,7 @@ var PhotoList = (function() {
 
     PhotoList.prototype = {
         render: function() {
-            var $el = $container;
+            var $el = $container.empty();
             _.each(this.data, function(photo){
                 var photo = new Photo(photo);
                 $el.append(photo.render());
